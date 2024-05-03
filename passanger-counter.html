@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Online Tickets</title>
+</head>
+
+<body>
+    <div class="container">
+    <h1>Ticket Counter</h1>
+    <h2 id="number">0</h2>
+    <button id="increment-btn" onclick="increment()">Increment</button></br>
+    <button id="save-btn" onclick="save()">Save</button>
+    <p id="save-el">PREVIOUS SAVED TICKETS: </p>
+</div>
+    <script>
+        let countlet = document.getElementById("number");
+        let count = 0;
+        let savel = document.getElementById("save-el"); // Get the reference to the existing save-el element
+        console.log(count);
+
+        function increment() {
+            count = count + 1;
+            countlet.innerText = count;
+            console.log(countlet);
+        }
+
+        function save() {
+            let countstr = count + " , ";
+            savel.innerText += countstr;
+            console.log("[" +count +"]");
+        }
+    </script>
+
+
+
+</body>
+
+</html>
